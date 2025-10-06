@@ -5,11 +5,11 @@ import jakarta.validation.constraints.Size;
 
 public class CurrencyRequest {
 
-    @NotBlank(message = "Currency code must not be blank")
-    @Size(max = 3, message = "Currency code must be at most 3 characters")
+    @NotBlank(message = "{NotBlank.currency.code}")
+    @Size(max = 3, message = "{Size.currency.code}")
     private String code;
 
-    @NotBlank(message = "Currency name must not be blank")
+    @NotBlank(message = "{NotBlank.currency.name}")
     private String name;
 
     public CurrencyRequest(String code, String name) {
